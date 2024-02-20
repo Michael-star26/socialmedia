@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <!-- css and bootstrap links -->
+        <link rel="stylesheet" href="../static/files/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/files/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/files/css/style.css">
+        <link rel="stylesheet" href="../static/files/css/lightslider.css">
+        <!-- supporting js files -->
+        <script src="../static/files/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/files/js/jquery.js"></script>
+        <script src="../static/files/js/lightslider.js"></script>
+        <script src="../static/files/js/script.js"></script>
+    <title>Home</title>
+</head>
+<body style="background-color:azure;color:ghostwhite">
+{%include 'navbar.html'%}
+
+
+<section class="slider p-4" style="zoom:70%">
+    <ul class="cs-hidden autoWidth">
+        {% for posts in user_posts %}
+        <li>
+            <div class="box" style="width:300px;overflow-y:show;border-radius:50px;zoom:80%">
+                <div class="slide-img">
+                    <img src="../static/files/images/{{posts[5]}}" style="border-radius:100px;float:left;zoom:30%;" alt="{{posts[5]}}" height="50"
+                        width="80" >
+
+                    <div class="overlay m-auto d-flex">
+                        <a href="/single_item/{{posts[2]}}" class="more-btn">Read More</a>
+                    </div>
+                    <p class="text-center text-danger"><b>{{ posts[0]}}</b></p>
+                </div>
+
+                <div class="detail-box">
+                 <p>{{posts[1]}}</p><br>
+                    <b class="text-warning">Post {{posts[2]}}</b>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+</section>
+
+<!--divider-->
+<br>
+    <hr style="background-color:magenta;width:50%;" class="m-auto">
+<br>
+<!--divider-->
+
+<!--posts 2-->
+<div class="card m-auto" style="width:50%;border-radius:15px;background-color:ghostwhite;border-color:transparent;">
+    <div class="card-body">
+        <p><b style="color:magenta">~~Mike</b><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:right" alt="" height="50"
+                        width="80" class="m-3"></a></p>
+        <br>
+        <br>
+        <p><span style="color:magenta;zoom:60%;"><b> Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details</b></span><br></p>
+    </div>
+    <div class="card-footer m-auto" style="border-color:transparent;border-radius:15px;background-color:ghostwhite">
+        <span class=""></span>
+        <span class="p-3" style="zoom:80%"><b>Likes</b></span><span style="color:magenta;zoom:60%"><b>200</b></span> <br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Comments</b></span><span style="color:magenta;zoom:60%"><b>45</b></span><br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Reposts</b></span><span style="color:magenta;zoom:60%"><b>8</b></span><br>
+    </div>
+</div>
+
+
+
+<!---->
+<!---->
+<br>
+<div class="card m-auto" style="width:20%;border-radius:15px;background-color:pink;border-color:transparent;float-top;position:absolute">
+    <div class="card-body">
+        <p><b style="color:magenta">~~Mike</b><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:right" alt="" height="50"
+                        width="80" class="m-3"></a></p>
+        <br>
+        <br>
+        <p><span style="color:magenta;zoom:60%;"><b> Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details</b></span><br></p>
+    </div>
+</div>
+<!---->
+<!---->
+
+
+
+<!-- End of posts2-->
+
+<!--divider-->
+<br>
+    <hr style="background-color:magenta;width:50%;" class="m-auto">
+<br>
+<!--divider-->
+
+<!--posts 3-->
+<div class="card m-auto" style="width:50%;border-radius:15px;background-color:bisque;border-color:transparent;">
+    <div class="card-body">
+        <p><b style="color:magenta">~~Mike</b><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:right" alt="" height="50"
+                        width="80" class="m-3"></a></p>
+        <br>
+        <br>
+        <p><span style="color:magenta;zoom:60%;"><b> Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details</b></span><br></p>
+    </div>
+    <div class="card-footer m-auto" style="border-color:transparent;border-radius:15px;background-color:ghostwhite">
+        <span class=""></span>
+        <span class="p-3" style="zoom:80%"><b>Likes</b></span><span style="color:magenta;zoom:60%"><b>200</b></span> <br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Comments</b></span><span style="color:magenta;zoom:60%"><b>45</b></span><br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Reposts</b></span><span style="color:magenta;zoom:60%"><b>8</b></span><br>
+    </div>
+</div>
+<!-- End of posts3-->
+
+
+<!--divider-->
+<br>
+    <hr style="background-color:magenta;width:50%;" class="m-auto">
+<br>
+<!--divider-->
+
+<!--posts 4-->
+<div class="card m-auto" style="width:50%;border-radius:15px;background-color:pink;border-color:transparent;">
+    <div class="card-body">
+        <p><b style="color:magenta">~~Mike</b><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:right" alt="" height="50"
+                        width="80" class="m-3"></a></p>
+        <br>
+        <br>
+        <p><span style="color:magenta;zoom:60%;"><b> Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details</b></span><br></p>
+    </div>
+    <div class="card-footer m-auto" style="border-color:transparent;border-radius:15px;background-color:ghostwhite">
+        <span class=""></span>
+        <span class="p-3" style="zoom:80%"><b>Likes</b></span><span style="color:magenta;zoom:60%"><b>200</b></span> <br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Comments</b></span><span style="color:magenta;zoom:60%"><b>45</b></span><br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Reposts</b></span><span style="color:magenta;zoom:60%"><b>8</b></span><br>
+    </div>
+</div>
+<!-- End of posts4-->
+<br>
+<div class="card m-auto d-flex p-5">
+    <div class="ui two column grid">
+  <div class="column ">
+    <div class="ui raised pink segment">
+      <a class="ui red ribbon label">Overview</a>
+      <span>Account Details</span>
+      <p>MIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIke</p>
+        <p>MIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIke</p>
+        <p>MIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIke</p>
+      <a class="ui blue ribbon label">Community</a> User Reviews
+      <p>MIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIke</p>
+        <p>MIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIke</p>
+        <p>MIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIke</p>
+
+        <div class="ui mini  compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages
+        <div class="left floating ui red label">22</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends
+        <div class="right floating ui blue label">22</div>
+      </a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui pink segment">
+      <a class="ui orange right ribbon label">Specs</a>
+      <p>MIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIke</p>
+        <p>MIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIke</p>
+        <p>MIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIke</p>
+
+      <a class="ui teal right ribbon label">Reviews</a>
+      <p>MIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIke</p>
+        <p>MIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIke</p>
+        <p>MIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIkeMIke</p>
+
+       <div class="ui mini compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages
+        <div class="left floating ui red label">22</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends
+        <div class="right floating ui blue label">22</div>
+      </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

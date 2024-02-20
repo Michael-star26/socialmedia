@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>profile</title>
+  <!-- css and bootstrap links -->
+        <link rel="stylesheet" href="../static/files/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/files/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/files/css/style.css">
+        <link rel="stylesheet" href="../static/files/css/lightslider.css">
+        <!-- supporting js files -->
+        <script src="../static/files/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/files/js/jquery.js"></script>
+        <script src="../static/files/js/lightslider.js"></script>
+        <script src="../static/files/js/script.js"></script>
+</head>
+<body class="p-2">
+{%include 'navbar.html'%}
+        <style>
+            #sec1 {
+                width: 100%;
+            }
+        </style>
+{%if session['LoggedIn']%}
+
+    <div class="col-sm-12">
+        <div class="container-fluid">
+            <!-- section for the navbar -->
+            <section id="sec1" class="row">
+                <div class="col-sm-12">
+                    <nav class="navbar  navbar-dark m-auto"
+                         style="border-radius:15px;padding:10px;zoom:80%;background-color:ghostwhite;color:azure;justify-content:center;width:fit-content;border-color:transparent">
+                        <a href="#" class="navbar-brand"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:10px" alt="" height="50"
+                        width="80"></a>
+                        <div>
+                            <ul class="navbar mr-auto" type="none">
+                                <li class="nav-item" ><a href="ladies.html" class="active-link nav-link" id="active-link nav-item" style="text-decoration:none;color:magenta"><b>Home</b></a></li>
+                                <li class="nav-item"><a href="#" class="nav-item nav-link " style="text-decoration:none;color:magenta"><b>Trending</b></a></li>
+                                <li class="nav-item"><a href="#" class="nav-item nav-link " style="text-decoration:none;color:magenta"><b>Watch</b></a></li>
+                                <li class="nav-item"><a href="#" class="nav-item nav-link " style="text-decoration:none;color:magenta"><b>Inbox</b></a></li>
+                            </ul>
+                            </div>
+
+                    </nav>
+                </div>
+            </section>
+        </div></div>
+<br>
+
+
+
+
+
+<!--Trial-->
+<!--<div class="card m-auto" style="width:20%;border-radius:15px;background-color:pink;border-color:transparent;float-right;position:fixed">-->
+<!--    <div class="card-body">-->
+<!--        <p><b style="color:magenta">~~Mike</b><a href="#"><img src="../static/files/images/lily.jpg" style="border-radius:100px;float:right" alt="" height="50"-->
+<!--                        width="80" class="m-3"></a></p>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <p><span style="color:magenta;zoom:60%;"><b> Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details</b></span><br></p>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--trial-->
+
+
+
+
+
+<div class="card m-auto" style="width:60%;border-radius:15px;background-color:ghostwhite;border-color:transparent;">
+    <div class="card-body">
+        <p><b style="color:magenta">~~Mike</b></p>
+        <a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:left" alt="" height="50"
+                        width="80" class="m-3"></a>
+        <p><span style="color:magenta;zoom:60%"><b>Some details Some details Some details Some details Some details</b></span><br></p>
+    </div>
+    <div class="card-footer m-auto" style="border-color:transparent;border-radius:15px;background-color:azure">
+        <span class=""></span>
+        <span class="p-3" style="zoom:80%"><b>Likes</b></span><span style="color:magenta;zoom:60%"><b>15000</b></span> <br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Posts</b></span><span style="color:magenta;zoom:60%"><b>15</b></span><br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Reposts</b></span><span style="color:magenta;zoom:60%"><b>1</b></span><br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Followers</b></span><span style="color:magenta;zoom:60%"><b>1</b></span><br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Following</b></span><span style="color:magenta;zoom:60%"><b>1</b></span><br>
+    </div>
+</div>
+
+<!--divider-->
+    <br>
+    <hr style="background-color:magenta;width:50%;" class="m-auto">
+    <br>
+<!--divider-->
+
+<div class="card m-auto" style="width:60%;border-radius:15px;background-color:azure;border-color:transparent;">
+    <div class="card-body">
+        <section class="row">
+            <div class="col-md-6 col-6 m-auto" style="background-color:bisque;border-radius:15px;border-color:transparent">
+                <span style="color:black;zoom:80%" class="p-3 m-auto"><b>Followers</b></span><span style="color:magenta;zoom:60%"><b>1</b></span><br>
+                <ul type="disk" style="color:red">
+                    <li id="list"><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:left;zoom:30%" alt="" height="50"
+                        width="80" ></a><span style="zoom:50%"><b>Tom</b></span></li>
+                    <li ><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:left;zoom:30%" alt="" height="50"
+                        width="80" ></a><span style="zoom:50%"><b>Tom</b></span></li>
+                    <li ><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:left;zoom:30%" alt="" height="50"
+                        width="80" ></a><span style="zoom:50%"><b>Tom</b></span></li>
+                    <li ><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:left;zoom:30%" alt="" height="50"
+                        width="80" ></a><span style="zoom:50%"><b>Tom</b></span></li>
+                    <li ><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:left;zoom:30%" alt="" height="50"
+                        width="80" ></a><span style="zoom:50%"><b>Tom</b></span></li>
+                    <li ><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:left;zoom:30%" alt="" height="50"
+                        width="80" ></a><span style="zoom:50%"><b>Tom</b></span></li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 col-6 m-auto" style="background-color:ghostwhite;border-radius:15px;border-color:transparent">
+                <span style="color:black;zoom:80%" class="p-3 m-auto"><b>Following</b></span><span style="color:magenta;zoom:60%"><b>1</b></span><br>
+                <ul type="disk" style="color:magenta">
+                    <li ><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:left;zoom:30%" alt="" height="50"
+                        width="80" ></a><span style="zoom:50%"><b>Tom</b></span></li>
+                    <li ><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:left;zoom:30%" alt="" height="50"
+                        width="80" ></a><span style="zoom:50%"><b>Tom</b></span></li>
+                    <li ><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:left;zoom:30%" alt="" height="50"
+                        width="80" ></a><span style="zoom:50%"><b>Tom</b></span></li>
+                    <li ><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:left;zoom:30%" alt="" height="50"
+                        width="80" ></a><span style="zoom:50%"><b>Tom</b></span></li>
+                    <li ><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:left;zoom:30%" alt="" height="50"
+                        width="80" ></a><span style="zoom:50%"><b>Tom</b></span></li>
+                    <li ><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:left;zoom:30%" alt="" height="50"
+                        width="80" ></a><span style="zoom:50%"><b>Tom</b></span></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!--divider-->
+<br>
+    <hr style="background-color:magenta;width:50%;" class="m-auto">
+<br>
+<!--divider-->
+
+<div class="card m-auto" style="width:10%;border-radius:15px;background-color:transparent;border-color:transparent;"><p><b style="color:magenta">Posts</b></p></div>
+
+<!--posts 1-->
+<div class="card m-auto" style="width:50%;border-radius:15px;background-color:azure;border-color:transparent;">
+    <div class="card-body">
+        <p><b style="color:magenta">~~Mike</b><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:right" alt="" height="50"
+                        width="80" class="m-3"></a></p>
+        <br>
+        <br>
+        <p><span style="color:magenta;zoom:60%"><b>Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details</b></span><br></p>
+    </div>
+    <div class="card-footer m-auto" style="border-color:transparent;border-radius:15px;background-color:ghostwhite">
+        <span class=""></span>
+        <span class="p-3" style="zoom:80%"><b>Likes</b></span><span style="color:magenta;zoom:60%"><b>15000</b></span> <br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Comments</b></span><span style="color:magenta;zoom:60%"><b>15</b></span><br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Reposts</b></span><span style="color:magenta;zoom:60%"><b>1</b></span><br>
+    </div>
+</div>
+<!-- End of posts1-->
+
+<!--divider-->
+<br>
+    <hr style="background-color:magenta;width:50%;" class="m-auto">
+<br>
+<!--divider-->
+
+<!--posts 2-->
+<div class="card m-auto" style="width:50%;border-radius:15px;background-color:ghostwhite;border-color:transparent;">
+    <div class="card-body">
+        <p><b style="color:magenta">~~Mike</b><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:right" alt="" height="50"
+                        width="80" class="m-3"></a></p>
+        <br>
+        <br>
+        <p><span style="color:magenta;zoom:60%;"><b> Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details</b></span><br></p>
+    </div>
+    <div class="card-footer m-auto" style="border-color:transparent;border-radius:15px;background-color:ghostwhite">
+        <span class=""></span>
+        <span class="p-3" style="zoom:80%"><b>Likes</b></span><span style="color:magenta;zoom:60%"><b>200</b></span> <br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Comments</b></span><span style="color:magenta;zoom:60%"><b>45</b></span><br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Reposts</b></span><span style="color:magenta;zoom:60%"><b>8</b></span><br>
+    </div>
+</div>
+
+
+
+<!---->
+<!---->
+<br>
+<div class="card m-auto" style="width:20%;border-radius:15px;background-color:pink;border-color:transparent;float-top;position:absolute">
+    <div class="card-body">
+        <p><b style="color:magenta">~~Mike</b><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:right" alt="" height="50"
+                        width="80" class="m-3"></a></p>
+        <br>
+        <br>
+        <p><span style="color:magenta;zoom:60%;"><b> Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details</b></span><br></p>
+    </div>
+</div>
+<!---->
+<!---->
+
+
+
+<!-- End of posts2-->
+
+<!--divider-->
+<br>
+    <hr style="background-color:magenta;width:50%;" class="m-auto">
+<br>
+<!--divider-->
+
+<!--posts 3-->
+<div class="card m-auto" style="width:50%;border-radius:15px;background-color:bisque;border-color:transparent;">
+    <div class="card-body">
+        <p><b style="color:magenta">~~Mike</b><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:right" alt="" height="50"
+                        width="80" class="m-3"></a></p>
+        <br>
+        <br>
+        <p><span style="color:magenta;zoom:60%;"><b> Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details</b></span><br></p>
+    </div>
+    <div class="card-footer m-auto" style="border-color:transparent;border-radius:15px;background-color:ghostwhite">
+        <span class=""></span>
+        <span class="p-3" style="zoom:80%"><b>Likes</b></span><span style="color:magenta;zoom:60%"><b>200</b></span> <br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Comments</b></span><span style="color:magenta;zoom:60%"><b>45</b></span><br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Reposts</b></span><span style="color:magenta;zoom:60%"><b>8</b></span><br>
+    </div>
+</div>
+<!-- End of posts3-->
+
+
+<!--divider-->
+<br>
+    <hr style="background-color:magenta;width:50%;" class="m-auto">
+<br>
+<!--divider-->
+
+<!--posts 4-->
+<div class="card m-auto" style="width:50%;border-radius:15px;background-color:pink;border-color:transparent;">
+    <div class="card-body">
+        <p><b style="color:magenta">~~Mike</b><a href="#"><img src="../static/files/profilePic/{{session['profile']}}" style="border-radius:100px;float:right" alt="" height="50"
+                        width="80" class="m-3"></a></p>
+        <br>
+        <br>
+        <p><span style="color:magenta;zoom:60%;"><b> Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details Some details</b></span><br></p>
+    </div>
+    <div class="card-footer m-auto" style="border-color:transparent;border-radius:15px;background-color:ghostwhite">
+        <span class=""></span>
+        <span class="p-3" style="zoom:80%"><b>Likes</b></span><span style="color:magenta;zoom:60%"><b>200</b></span> <br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Comments</b></span><span style="color:magenta;zoom:60%"><b>45</b></span><br>
+        <span style="color:black;zoom:80%" class="p-3 "><b>Reposts</b></span><span style="color:magenta;zoom:60%"><b>8</b></span><br>
+    </div>
+</div>
+<!-- End of posts4-->
+{%else%}
+<a href="/signup" class="buy-btn  nav-nav-link nav-item m-auto" style="zoom:60%;border-color:transparent;border-radius:5px">Signup</a> <br>
+<a href="/login" class="buy-btn  nav-nav-link nav-item m-auto" style="zoom:60%;border-color:transparent;border-radius:5px">Login</a><br>
+{%endif%}
+
+</body>
+</html>

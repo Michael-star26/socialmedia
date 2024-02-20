@@ -1,0 +1,48 @@
+
+        <style>
+            #sec1 {
+                width: 100%;
+            }
+        </style>
+        <div class="col-sm-12">
+        <div class="container-fluid">
+            <!-- section for the navbar -->
+            <section id="sec1" class="row">
+                <div class="col-sm-12">
+                    <nav class="navbar navbar-expand-md navbar-dark mt-3 mb-2"
+                         style="border-radius:15px;padding:10px;zoom:80%;background-color:bisque;color:magenta;border-color:transparent">
+                        <a href="#" class="navbar-brand"><img src="../static/files/profilePic/{{session['profile']}}" alt="" height="50"
+                        width="80" style="border-radius:100px;zoom:70%"></a>
+                        <!-- toggle button -->
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#navbarcollapse" id="btn1" style="zoom:50%;background-color:pink;border-radius:15px;border-color:transparent"><span
+                        class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarcollapse">
+                            <ul class="navbar-nav mr-auto" style="color:magenta">
+                                <li class="nav-item"><a href="/" class="active-link nav-link" id="active-link nav-item" style="color:magenta"><b>Home</b></a></li>
+                                <li class="nav-item"><a href="/" class="nav-item nav-link " style="color:magenta"><b>Trending</b></a></li>
+                                <li class="nav-item"><a href="/" class="nav-item nav-link" style="color:magenta"><b>Socialise</b></a></li>
+                                <li class="nav-item"><a href="/" class="nav-item nav-link " style="color:magenta"><b>Gigz & Connections</b></a></li>
+                                {%if session['LoggedIn']%}
+                                <li class="nav-item"><a href="/post/{{session['LoggedIn']}}" class="nav-item nav-link " style="color:magenta"><b>Post</b></a></li>
+                                {%else%}
+                                <li class="nav-item"><a href="/login" title="Please Login first" class="nav-item nav-link "  style="color:red"><b>Post</b></a></li>
+                                {%endif%}
+                                <li class="nav-item"><a href="/profile/{{session['LoggedIn']}}" class="nav-item nav-link " style="color:magenta"><b>Inbox</b></a></li>
+                            </ul>
+                            {%if session['LoggedIn']%}
+                            <span style="color:red"><b>{{session['online']}}</b></span>
+                            <a href="/profile/{{session['LoggedIn']}}" class="buy-btn  nav-nav-link nav-item ms-auto" style="zoom:60%;border-color:transparent;border-radius:5px">Profile</a>
+                            <a href="/logout" class="buy-btn  nav-nav-link nav-item ms-auto" style="zoom:60%;border-color:transparent;border-radius:5px;background-color:transparent">Logout</a> <br>
+                            {%elif session["signedUp"]%}
+                            <a href="/login" class="buy-btn  nav-nav-link nav-item ms-auto" style="zoom:60%;border-color:transparent;border-radius:5px">Login</a><br>
+                            {%else%}
+                            <a href="/signup" class="buy-btn  nav-nav-link nav-item ms-auto" style="zoom:60%;border-color:transparent;border-radius:5px">Signup</a> <br>
+                            <a href="/login" class="buy-btn  nav-nav-link nav-item ms-auto" style="zoom:60%;border-color:transparent;border-radius:5px">Login</a><br>
+                            </div>
+                            {%endif%}
+
+                    </nav>
+                </div>
+            </section>
+        </div></div>

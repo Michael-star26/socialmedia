@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- css and bootstrap links -->
+        <link rel="stylesheet" href="../static/files/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/files/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/files/css/style.css">
+        <link rel="stylesheet" href="../static/files/css/lightslider.css">
+        <!-- supporting js files -->
+        <script src="../static/files/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/files/js/jquery.js"></script>
+        <script src="../static/files/js/lightslider.js"></script>
+        <script src="../static/files/js/script.js"></script>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+    <title>Signup</title>
+</head>
+<body>
+{%include 'navbar.html'%}
+  <div class="row" style="margin-top:2rem;border-radius:15px;">
+
+      <div class="card m-auto d-flex" style="width:fit-content;border-radius:15px;background-color:ghostwhite">
+          <form action=""  method="post"  class="ui form form-control" style="background-color:transparent;border-color:transparent;border-radius:15px;justify-content:center;width:fit-content">
+
+            <div class="alert alert-info alert-dismissible fade  show bg-light" role="alert" style="height:max-content;border-radius:15px;height:fit-content;width:250px;align-items:start; overflow-y:show">
+                <h4 class="alert-heading text-center" style="zoom:70%;color:green;margin-top:0">{{ error }}</h4>
+            </div>
+            <div id="valid" class="text-success"></div>
+            <div id="error" class="text-danger"></div>
+              <div class="required info field">
+            <label for="email">Enter Email</label>
+            <div class="ui corner labeled input">
+            <input type="email" name="useremail"  id="email"  autocomplete="true" placeholder="Enter Email" class="form-control"><br>
+              <div class="ui corner label">
+                <i class="asterisk icon"></i>
+              </div>
+            </div></div>
+              <div class="required info field">
+            <label for="password">Enter Password <sup id="length" style="font-family:david;color:magenta;font-size:18"></sup></label>
+                  <div class="ui corner labeled input">
+            <input type="password" name="password"  onkeypress="passLength()"  id="password" placeholder="Enter Password" class="form-control"><br>
+                  <div class="ui corner label">
+                <i class="asterisk icon"></i>
+              </div></div>
+              </div>
+              <input type="submit" value="Signin"   class="ui positive  button m-auto d-flex" style="border-color:transparent">
+              <div class="ui horizontal divider">Or</div>
+              <a href="/signup" class="tiny ui olive button d-flex m-auto" style="justify-content:center">Signup</a>
+
+        </form>
+
+
+          <script type="text/JavaScript">
+              function user(){
+              var username=document.getElementById("username").value
+              if (username != "Mike"){
+              document.getElementById("error").innerHTML="Username is not Valid"
+              document.getElementById("valid").innerHTML=" "
+              document.getElementById("ProgressInput").value=0
+              } else {
+              document.getElementById("valid").innerHTML="Username is  Valid"
+              document.getElementById("error").innerHTML=""
+              }
+              return false
+              }
+
+              function validate(){
+              var password=document.getElementById("password").value
+              var confirmPassword=document.getElementById("confirmPassword").value
+              if (password != confirmPassword){
+              document.getElementById("error").innerHTML="Passwords Do not Match"
+              document.getElementById("valid").innerHTML=" "
+              } else {
+              document.getElementById("valid").innerHTML="Passwords Match"
+              document.getElementById("error").innerHTML=""
+              }
+                 return false
+              }
+
+              function passLength(){
+              var password=document.getElementById("password").value
+              number=8
+              length=password.length + 1
+              if(password.length <8){
+               document.getElementById("error").innerHTML="Passwords Must be altleast 8 characters"
+               passlength=number-length
+               document.getElementById("length").innerHTML=passlength
+               document.getElementById("valid").innerHTML=" "
+               } else{
+               document.getElementById("valid").innerHTML="Password is strong"
+               document.getElementById("error").innerHTML=""
+               }
+              }
+
+              function userpaste(){
+              alert("Paste is not allowed")
+              document.getElementById("username").value="Not allowed "
+              }
+
+
+              function popMSG(){
+               $.toast({
+                  title: 'LOOK',
+                  message: 'See, how long i will last',
+                  showProgress: 'bottom',
+                  classProgress: 'red'
+                })
+                ;
+              }
+
+
+          </script>
+    </div>
+  </div>
+</body>
+</html>
